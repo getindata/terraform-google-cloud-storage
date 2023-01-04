@@ -1,4 +1,4 @@
-# GCP Bucket Terraform Module
+# GCP Cloud Storage Terraform Module
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![License](https://badgen.net/github/license/getindata/terraform-azurerm-vnet/)
 ![Release](https://badgen.net/github/release/getindata/terraform-azurerm-vnet/)
