@@ -9,6 +9,16 @@
 </p>
 
 <!-- BEGIN_TF_DOCS -->
+## Usage
+```
+module "cloudstorage" {
+
+  source = "github.com/getindata/terraform-google-cloud-storage"
+  project_id = "<PROJECT_ID>"
+  bucket_name = "example"
+
+}
+```
 ## Requirements
 
 | Name | Version |
