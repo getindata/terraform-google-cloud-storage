@@ -9,42 +9,9 @@
 </p>
 
 <!-- BEGIN_TF_DOCS -->
-## Usage
-```
-module "cloudstorage" {
 
-  source = "github.com/getindata/terraform-google-cloud-storage"
-  project_id = "<PROJECT_ID>"
-  bucket_name = "example"
 
-}
-```
-## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=0.13.0 |
-| <a name="requirement_google"></a> [google](#requirement\_google) | >= 3.50, < 5.0 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | >= 3.50, < 5.0 |
-
-## Modules
-
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_kms"></a> [kms](#module\_kms) | terraform-google-modules/kms/google | ~> 2.1 |
-| <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
-
-## Resources
-
-| Name | Type |
-|------|------|
-| [google_storage_bucket.this](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
-| [google_storage_project_service_account.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/storage_project_service_account) | data source |
 
 ## Inputs
 
@@ -73,15 +40,42 @@ module "cloudstorage" {
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | ID element. Usually an abbreviation of your organization name, e.g. 'eg' or 'cp', to help ensure generated IDs are globally unique | `string` | `null` | no |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | The default project to manage resources in | `string` | `""` | no |
 | <a name="input_regex_replace_chars"></a> [regex\_replace\_chars](#input\_regex\_replace\_chars) | Terraform regular expression (regex) string.<br>Characters matching the regex will be removed from the ID elements.<br>If not set, `"/[^a-zA-Z0-9-]/"` is used to remove all characters other than hyphens, letters and digits. | `string` | `null` | no |
-| <a name="input_region"></a> [region](#input\_region) | Region to create resources where applicable | `string` | `"eu-central-1"` | no |
+| <a name="input_region"></a> [region](#input\_region) | Region to create resources where applicable | `string` | `"europe-central2"` | no |
 | <a name="input_stage"></a> [stage](#input\_stage) | ID element. Usually used to indicate role, e.g. 'prod', 'staging', 'source', 'build', 'test', 'deploy', 'release' | `string` | `null` | no |
 | <a name="input_storage_bucket_labels"></a> [storage\_bucket\_labels](#input\_storage\_bucket\_labels) | Labels to apply to the storage bucket | `map(string)` | `{}` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_kms"></a> [kms](#module\_kms) | terraform-google-modules/kms/google | ~> 2.1 |
+| <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
+
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_gcs_bucket_tfstate"></a> [gcs\_bucket](#output\_gcs\_bucket\_tfstate) | Bucket used for storing terraform state for foundations pipelines in seed project. |
+| <a name="output_gcs_bucket"></a> [gcs\_bucket](#output\_gcs\_bucket) | Bucket used for storing state. |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_google"></a> [google](#provider\_google) | n/a |
+
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [google_storage_bucket.this](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
+| [google_storage_project_service_account.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/storage_project_service_account) | data source |
 <!-- END_TF_DOCS -->
