@@ -10,12 +10,6 @@
 
 <!-- BEGIN_TF_DOCS -->
 
-<<<<<<< HEAD
-  source = "github.com/getindata/terraform-google-cloud-storage"
-  project_id = "<PROJECT_ID>"
-  bucket_name = module.this.id
-=======
->>>>>>> b30b86f4887de64f478d03a347afe7bea589ec52
 
 
 
