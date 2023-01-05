@@ -7,7 +7,7 @@ variable "project_id" {
 variable "region" {
   description = "Region to create resources where applicable"
   type        = string
-  default     = "eu-central-2"
+  default     = "europe-central2"
 }
 
 variable "encrypt_gcs_bucket_tfstate" {

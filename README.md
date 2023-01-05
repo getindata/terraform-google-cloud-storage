@@ -83,5 +83,5 @@ module "cloudstorage" {
 
 | Name | Description |
 |------|-------------|
-| <a name="output_gcs_bucket_tfstate"></a> [gcs\_bucket\_tfstate](#output\_gcs\_bucket\_tfstate) | Bucket used for storing terraform state for foundations pipelines in seed project. |
+| <a name="output_gcs_bucket_tfstate"></a> [gcs\_bucket](#output\_gcs\_bucket\_tfstate) | Bucket used for storing terraform state for foundations pipelines in seed project. |
 <!-- END_TF_DOCS -->
