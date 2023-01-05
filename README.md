@@ -1,7 +1,9 @@
 # GCP Cloud Storage Terraform Module
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![GCP](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![License](https://badgen.net/github/license/getindata/terraform-azurerm-vnet/)
 ![Release](https://badgen.net/github/release/getindata/terraform-azurerm-vnet/)
+
 
 <p align="center">
   <img height="150" src="https://getindata.com/img/logo.svg">
