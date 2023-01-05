@@ -15,7 +15,7 @@ module "cloudstorage" {
 
   source = "github.com/getindata/terraform-google-cloud-storage"
   project_id = "<PROJECT_ID>"
-  bucket_name = "example"
+  bucket_name = module.this.id
 
 }
 ```
