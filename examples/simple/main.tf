@@ -1,6 +1,5 @@
-module "terraform_module_template" {
-  source  = "../../"
-  context = module.this.context
 
-  example_var = "This is a example value."
+module "google_cloud_storage" {
+  source = "github.com/getindata/terraform-google-cloud-storage"
+  name
 }

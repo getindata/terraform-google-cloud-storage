@@ -1,4 +1,4 @@
-output "example_output" {
-  description = "Example output of the module"
-  value       = module.terraform_module_template
+output "gcs_bucket" {
+  description = "Bucket used for storing state."
+  value       = one(google_storage_bucket.this).name
 }
