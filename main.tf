@@ -27,7 +27,7 @@ module "kms" {
 resource "google_storage_bucket" "this" {
   count                       = local.bucket_enabled ? 1 : 0
   project                     = var.project_id
-  name                        = local.bucket_name
+  name                        = local.name_from_descriptor
   location                    = var.region
   labels                      = var.storage_bucket_labels
   force_destroy               = var.force_destroy

@@ -3,7 +3,11 @@ variable "project_id" {
   default     = ""
   type        = string
 }
-
+variable "descriptor_name" {
+  description = "Name of the descriptor used to form a resource name"
+  default     = "test"
+  type        = string
+}
 variable "region" {
   description = "Region to create resources where applicable"
   type        = string
