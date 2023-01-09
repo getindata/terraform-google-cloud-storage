@@ -55,7 +55,7 @@ variable "context" {
     tenant              = null
     environment         = null
     stage               = null
-    name                = null
+    name                = "test"
     delimiter           = null
     attributes          = []
     tags                = {}
@@ -126,7 +126,6 @@ variable "stage" {
 
 variable "name" {
   type        = string
-  default     = null
   description = <<-EOT
     ID element. Usually the component or solution name, e.g. 'app' or 'jenkins'.
     This is the only ID element not also included as a `tag`.
