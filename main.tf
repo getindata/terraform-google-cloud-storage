@@ -37,7 +37,7 @@ resource "google_storage_bucket" "this" {
     enabled = true
   }
   logging {
-    log_bucket = "mylogsbucket"
+    log_bucket = var.log_bucket
   }
   dynamic "encryption" {
     for_each = local.encrypt_gcs_bucket_tfstate ? ["encryption"] : []

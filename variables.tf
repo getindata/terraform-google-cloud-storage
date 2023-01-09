@@ -58,3 +58,8 @@ variable "bucket_enabled" {
   default     = true
   description = "Whether to create the GCS bucket"
 }
+variable "log_bucket" {
+  type        = string
+  default     = "mylogsbucket"
+  description = "Specify bucket to store access log in"
+}
