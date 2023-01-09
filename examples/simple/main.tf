@@ -1,4 +1,6 @@
 module "google_cloud_storage" {
-  source = "github.com/getindata/terraform-google-cloud-storage"
+  source  = "../../"
+  context = module.this.context
   name = "test"
+  project_id = "test_id"
 }

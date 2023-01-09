@@ -1,6 +1,5 @@
 variable "project_id" {
   description = "The default project to manage resources in"
-  default     = ""
   type        = string
 }
 variable "descriptor_name" {
