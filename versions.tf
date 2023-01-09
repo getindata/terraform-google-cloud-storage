@@ -2,11 +2,11 @@
 
 terraform {
   required_version = ">= 0.13.0"
-
   required_providers {
-    null = {
-      source  = "hashicorp/null"
-      version = "3.1.1"
+    google = {
+      source  = "hashicorp/google"
+      version = "4.15.0"
     }
   }
 }
+
