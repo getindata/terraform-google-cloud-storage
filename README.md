@@ -13,13 +13,7 @@
 <!-- BEGIN_TF_DOCS -->
 
 
-##Usage
-```
-module "google_cloud_storage" {
-     name       = "test"
-     project_id = "test_id"
-   }
-```
+
 
 ## Inputs
 
