@@ -66,14 +66,14 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | n/a |
+| <a name="provider_google"></a> [google](#provider\_google) | = ~> 4.0 |
 
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
-| <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
+| <a name="requirement_null"></a> [google](#requirement\_null) | = 3.1.1 |
 
 ## Resources
 
