@@ -4,7 +4,7 @@ variable "project_id" {
 }
 variable "descriptor_name" {
   description = "Name of the descriptor used to form a resource name"
-  default     = ""
+  default     = "test-bucket"
   type        = string
 }
 variable "region" {
