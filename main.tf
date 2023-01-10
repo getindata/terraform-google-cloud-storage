@@ -44,7 +44,7 @@ resource "google_storage_bucket" "this" {
   dynamic "encryption" {
     for_each = var.encryption.enabled ? ["encryption"] : []
     content {
-      default_kms_key_name = module.kms[0].keys["${module.this.id}-key"]
+      default_kms_key_name = module.kms[0].keys[local.kms_key_name]
     }
   }
 }

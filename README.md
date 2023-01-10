@@ -12,7 +12,7 @@
 
 ---
 
-Terraform module for creating gcp bucket. 
+Terraform module for creating GCP bucket. 
 ## Usage
 ```terraform
 module "google_cloud_storage" {
