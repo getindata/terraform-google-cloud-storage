@@ -13,7 +13,6 @@ variable "region" {
   default     = "europe-central2"
 }
 
-
 variable "encryption" {
   description = "Kms variables"
   type = object({
@@ -34,5 +33,5 @@ variable "force_destroy" {
 variable "log_bucket" {
   description = "Specify bucket to store access log in"
   type        = string
-  default     = "mylogsbucket"
+  default     = null
 }

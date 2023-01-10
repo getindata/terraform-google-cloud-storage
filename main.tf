@@ -29,7 +29,7 @@ resource "google_storage_bucket" "this" {
   project                     = var.project_id
   name                        = local.name_from_descriptor
   location                    = var.region
-  labels                      = module.this.tags
+  labels                      = { for k, v in module.this.tags : lower(k) => lower(v) }
   force_destroy               = var.force_destroy
   uniform_bucket_level_access = true
   versioning {
