@@ -1,8 +1,9 @@
 # GCP Cloud Storage Terraform Module
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![GCP](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
-![License](https://badgen.net/github/license/getindata/terraform-azurerm-vnet/)
-![Release](https://badgen.net/github/release/getindata/terraform-azurerm-vnet/)
+
+![License](https://badgen.net/github/license/getindata/terraform-google-cloud-storage/)
+![Release](https://badgen.net/github/release/getindata/terraform-google-cloud-storage/)
 
 
 <p align="center">
@@ -16,8 +17,10 @@ Terraform module for creating GCP bucket.
 ## Usage
 ```terraform
 module "google_cloud_storage" {
-  source = "github.com/getindata/google-cloud-storage"
-  name   = "gcp-storage"
+  source = "getindata/cloud-storage/google"
+  # version  = "x.x.x"
+  
+  name       = "gcp-storage"
   project_id = "project-id"
 }
 ```
@@ -93,3 +96,22 @@ module "google_cloud_storage" {
 | [google_storage_bucket.this](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
 | [google_storage_project_service_account.gcs_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/storage_project_service_account) | data source |
 <!-- END_TF_DOCS -->
+
+## CONTRIBUTING
+
+Contributions are very welcomed!
+
+Start by reviewing [contribution guide](CONTRIBUTING.md) and our [code of conduct](CODE_OF_CONDUCT.md). After that, start coding and ship your changes by creating a new PR.
+
+## LICENSE
+
+Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
+
+## AUTHORS
+
+<!--- Replace repository name -->
+<a href="https://github.com/getindata/terraform-google-cloud-storage/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=getindata/terraform-google-cloud-storage" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
