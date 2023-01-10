@@ -4,4 +4,5 @@ locals {
   ), module.this.delimiter)
   enabled                    = module.this.enabled
   encrypt_gcs_bucket_tfstate = local.enabled && var.encrypt_gcs_bucket_tfstate
+  kms_key_name               = "${module.this.id}-key"
 }

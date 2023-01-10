@@ -18,27 +18,15 @@ variable "encrypt_gcs_bucket_tfstate" {
   type        = bool
   default     = true
 }
-
-variable "key_protection_level" {
-  description = "The protection level to use when creating a version based on this template"
-  type        = string
-  default     = "SOFTWARE"
-  validation {
-    condition     = contains(["SOFTWARE", "HSM"], var.key_protection_level)
-    error_message = "Invalid value provided. Allowed values: [\"SOFTWARE\", \"HSM\"]."
-  }
-}
-
-variable "key_rotation_period" {
-  description = "The rotation period of the key"
-  type        = string
-  default     = null
-}
-
-variable "kms_prevent_destroy" {
-  description = "Set the prevent_destroy lifecycle attribute on keys"
-  type        = bool
-  default     = true
+variable "encryption" {
+  description = "Kms variables"
+  type = object({
+    enabled              = optional(bool, false)
+    key_protection_level = optional(string, "SOFTWARE")
+    key_rotation_period  = optional(string)
+    kms_prevent_destroy  = optional(bool, false)
+  })
+  default = {}
 }
 
 variable "force_destroy" {
