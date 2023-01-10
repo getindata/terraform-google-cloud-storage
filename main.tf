@@ -35,8 +35,11 @@ resource "google_storage_bucket" "this" {
   versioning {
     enabled = true
   }
-  logging {
-    log_bucket = var.log_bucket
+  dynamic "logging" {
+    for_each = var.log_bucket != null ? ["logging"] : []
+    content {
+      log_bucket = var.log_bucket
+    }
   }
   dynamic "encryption" {
     for_each = local.encrypt_gcs_bucket_tfstate ? ["encryption"] : []
