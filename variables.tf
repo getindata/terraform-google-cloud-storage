@@ -41,23 +41,12 @@ variable "kms_prevent_destroy" {
   default     = true
 }
 
-variable "storage_bucket_labels" {
-  description = "Labels to apply to the storage bucket"
-  type        = map(string)
-  default     = {}
-}
-
 variable "force_destroy" {
   description = "If supplied, the state bucket will be deleted even while containing objects"
   type        = bool
   default     = false
 }
 
-variable "bucket_enabled" {
-  description = "Whether to create the GCS bucket"
-  type        = bool
-  default     = true
-}
 variable "log_bucket" {
   description = "Specify bucket to store access log in"
   type        = string
