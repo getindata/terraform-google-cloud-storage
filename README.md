@@ -2,8 +2,8 @@
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![GCP](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-![License](https://badgen.net/github/license/getindata/terraform-azurerm-vnet/)
-![Release](https://badgen.net/github/release/getindata/terraform-azurerm-vnet/)
+![License](https://badgen.net/github/license/getindata/terraform-google-cloud-storage/)
+![Release](https://badgen.net/github/release/getindata/terraform-google-cloud-storage/)
 
 
 <p align="center">
