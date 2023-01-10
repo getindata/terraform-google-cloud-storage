@@ -55,7 +55,7 @@ variable "context" {
     tenant              = null
     environment         = null
     stage               = null
-    name                = "test"
+    name                = null
     delimiter           = null
     attributes          = []
     tags                = {}

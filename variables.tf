@@ -4,8 +4,8 @@ variable "project_id" {
 }
 variable "descriptor_name" {
   description = "Name of the descriptor used to form a resource name"
-  default     = "test-bucket"
   type        = string
+  default     = "gcp-bucket"
 }
 variable "region" {
   description = "Region to create resources where applicable"
@@ -20,8 +20,8 @@ variable "encrypt_gcs_bucket_tfstate" {
 }
 
 variable "key_protection_level" {
-  type        = string
   description = "The protection level to use when creating a version based on this template"
+  type        = string
   default     = "SOFTWARE"
   validation {
     condition     = contains(["SOFTWARE", "HSM"], var.key_protection_level)
@@ -54,12 +54,12 @@ variable "force_destroy" {
 }
 
 variable "bucket_enabled" {
+  description = "Whether to create the GCS bucket"
   type        = bool
   default     = true
-  description = "Whether to create the GCS bucket"
 }
 variable "log_bucket" {
+  description = "Specify bucket to store access log in"
   type        = string
   default     = "mylogsbucket"
-  description = "Specify bucket to store access log in"
 }
