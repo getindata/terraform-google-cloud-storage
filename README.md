@@ -14,7 +14,7 @@
 
 Terraform module for creating gcp bucket for state. 
 ## Usage
-```hcl-terraform
+```terraform
 module "google_cloud_storage" {
   source = "github.com/getindata/google-cloud-storage"
   name   = "gcp-storage"
@@ -74,7 +74,9 @@ module "google_cloud_storage" {
 
 | Name | Description |
 |------|-------------|
-| <a name="output_gcs_bucket"></a> [gcs\_bucket](#output\_gcs\_bucket) | Bucket used for storing state. |
+| <a name="output_gcs_bucket_id"></a> [gcs\_bucket\_id](#output\_gcs\_bucket\_id) | Bucket ID. |
+| <a name="output_gcs_bucket_name"></a> [gcs\_bucket\_name](#output\_gcs\_bucket\_name) | Bucket name. |
+| <a name="output_gcs_bucket_url"></a> [gcs\_bucket\_url](#output\_gcs\_bucket\_url) | Bucket URL. |
 
 ## Providers
 
