@@ -25,7 +25,7 @@ module "kms" {
 }
 
 resource "google_storage_bucket" "this" {
-  count                       = local.bucket_enabled ? 1 : 0
+  count                       = module.this.enabled
   project                     = var.project_id
   name                        = local.name_from_descriptor
   location                    = var.region
