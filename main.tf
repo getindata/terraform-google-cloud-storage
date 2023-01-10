@@ -3,7 +3,7 @@ data "google_storage_project_service_account" "gcs_account" {
 }
 
 module "kms" {
-  count   = local.encrypt_gcs_bucket_tfstate ? 1 : 0
+  count   = local.encryption_enabled ? 1 : 0
   source  = "terraform-google-modules/kms/google"
   version = "~> 2.1"
 
@@ -42,7 +42,7 @@ resource "google_storage_bucket" "this" {
     }
   }
   dynamic "encryption" {
-    for_each = local.encrypt_gcs_bucket_tfstate ? ["encryption"] : []
+    for_each = var.encryption.enabled ? ["encryption"] : []
     content {
       default_kms_key_name = module.kms[0].keys["${module.this.id}-key"]
     }

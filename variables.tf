@@ -13,11 +13,7 @@ variable "region" {
   default     = "europe-central2"
 }
 
-variable "encrypt_gcs_bucket_tfstate" {
-  description = "Encrypt bucket used for storing terraform state files in seed project"
-  type        = bool
-  default     = true
-}
+
 variable "encryption" {
   description = "Kms variables"
   type = object({
