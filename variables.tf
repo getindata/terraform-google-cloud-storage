@@ -35,3 +35,9 @@ variable "log_bucket" {
   type        = string
   default     = null
 }
+
+variable "enforce_public_access_prevention" {
+  description = "Prevents public access to a bucket. If set to false, the bucket uses public access prevention only if the bucket is subject to the public access prevention organization policy constraint"
+  type        = bool
+  default     = true
+}

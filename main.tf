@@ -32,6 +32,8 @@ resource "google_storage_bucket" "this" {
   labels                      = { for k, v in module.this.tags : lower(k) => lower(v) }
   force_destroy               = var.force_destroy
   uniform_bucket_level_access = true
+  public_access_prevention    = var.enforce_public_access_prevention ? "enforced" : "inherited"
+
   versioning {
     enabled = true
   }
