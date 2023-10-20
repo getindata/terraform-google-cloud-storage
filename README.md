@@ -44,6 +44,7 @@ module "google_cloud_storage" {
 | <a name="input_descriptor_name"></a> [descriptor\_name](#input\_descriptor\_name) | Name of the descriptor used to form a resource name | `string` | `"gcp-bucket"` | no |
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Set to false to prevent the module from creating any resources | `bool` | `null` | no |
 | <a name="input_encryption"></a> [encryption](#input\_encryption) | Kms variables | <pre>object({<br>    enabled              = optional(bool, false)<br>    key_protection_level = optional(string, "SOFTWARE")<br>    key_rotation_period  = optional(string)<br>    kms_prevent_destroy  = optional(bool, false)<br>  })</pre> | `{}` | no |
+| <a name="input_enforce_public_access_prevention"></a> [enforce\_public\_access\_prevention](#input\_enforce\_public\_access\_prevention) | Prevents public access to a bucket. If set to false, the bucket uses public access prevention only if the bucket is subject to the public access prevention organization policy constraint | `bool` | `true` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | ID element. Usually used for region e.g. 'uw2', 'us-west-2', OR role 'prod', 'staging', 'dev', 'UAT' | `string` | `null` | no |
 | <a name="input_force_destroy"></a> [force\_destroy](#input\_force\_destroy) | If supplied, the state bucket will be deleted even while containing objects | `bool` | `false` | no |
 | <a name="input_id_length_limit"></a> [id\_length\_limit](#input\_id\_length\_limit) | Limit `id` to this many characters (minimum 6).<br>Set to `0` for unlimited length.<br>Set to `null` for keep the existing setting, which defaults to `0`.<br>Does not affect `id_full`. | `number` | `null` | no |
@@ -80,14 +81,14 @@ module "google_cloud_storage" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | < 5.0, >= 3.83 |
+| <a name="provider_google"></a> [google](#provider\_google) | < 5.0, >= 4.42 |
 
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
-| <a name="requirement_google"></a> [google](#requirement\_google) | < 5.0, >= 3.83 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | < 5.0, >= 4.42 |
 
 ## Resources
 
